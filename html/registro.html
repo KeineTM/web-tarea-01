@@ -1,0 +1,63 @@
+<!-- Universidad Abierta y a Distancia de México -->
+<!-- Unidad 2. Actividad 2. Normas de seguridad en sitios -->
+<!-- Programación Web II -->
+<!-- Alumna: Jessica Trejo Méndez -->
+<!-- Matrícula: ES1821000225 -->
+<!-- 16/02/22 -->
+<!-- registro.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Unidad 2. Actividad 2. Normas de seguridad en sitios.</title>
+	
+	<!-- Inserción de hoja de estilos CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<!-- Inserción de funciones JS -->
+	<script type="text/javascript" src="../js/funciones.js"></script>
+
+</head>
+<body>
+	<header>
+		<nav>
+			<ul class="menu">
+				<li><a href="login.html">Iniciar sesión</a></li>
+				<li><a href="#">Registrarse</a></li>
+				<li><a href="../index.html">Inicio</a></li>
+			</ul>
+		</nav>
+		<center><h1>Universidad Abierta y a Distancia de México</h1></center>
+	</header>
+	<div>
+		<h3>Ingrese los siguientes datos para registrarse como estudiante</h3>
+			
+		<!-- Formulario -->
+		<form action="../php/registro.php" method="POST">
+			<label>ID de estudiante: </label><br>
+			<input type="text" name="id" id="id" onkeyup="validarNumeros();" required><br>
+
+			<!-- Mensaje de verificación -->
+			<label id="alerta1" style="visibility: hidden;"><font color="red" size="2">¡Este campo sólo admite números enteros!</font></label><br>
+
+			<label>Nombre completo: </label><br>
+			<input type="text" name="nombre" id="nombre" required><br><br>
+			
+			<label for="pass1">Contraseña: </label><br>
+			<font size="2">(La contraseña debe contener un mínimo de 8 caractéres entre letras, números y, por lo menos, un caracter especial):</font><br>
+			<input type="password" id="pass1" name="pass1" onkeyup="validarPass();" required><br>
+				
+			<!-- Mensaje de verificación -->
+			<label id="alerta2" style="visibility: hidden;"><font color="red" size="2">¡La contraseña no cumple con el formato indicado!</font></label><br>
+
+			<label for="pass_confirm">Confirmar contraseña: </label><br>
+			<input type="password" id="pass_confirm" name="pass_confirm" onchange="confirmarPass();" required><br>
+
+			<!-- Mensaje de verificación -->
+			<label id="alerta3" style="visibility: hidden;"><font color="red" size="2">¡Las contraseñas no coinciden!</font></label><br>
+
+			<input type="submit" value="Enviar"><br><br>
+			<input type="reset">
+		</form>
+	</div>
+</body>
+</html>

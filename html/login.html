@@ -1,0 +1,49 @@
+<!-- Universidad Abierta y a Distancia de México -->
+<!-- Unidad 2. Actividad 2. Normas de seguridad en sitios -->
+<!-- Programación Web II -->
+<!-- Alumna: Jessica Trejo Méndez -->
+<!-- Matrícula: ES1821000225 -->
+<!-- 17/02/22 -->
+<!-- login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Unidad 2. Actividad 2. Normas de seguridad en sitios.</title>
+	
+	<!-- Inserción de hoja de estilos CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<!-- Inserción de funciones JS -->
+	<script type="text/javascript" src="../js/funciones.js"></script>
+
+</head>
+<body>
+	<header>
+		<nav>
+			<ul class="menu">
+				<li><a href="#">Iniciar sesión</a></li>
+				<li><a href="registro.html">Registrarse</a></li>
+				<li><a href="../index.html">Inicio</a></li>
+			</ul>
+		</nav>
+		<center><h1>Universidad Abierta y a Distancia de México</h1></center>
+	</header>
+	<div>
+		<h3>Ingrese los siguientes datos para iniciar sesión</h3>
+		
+		<!-- Formulario -->
+		<form action="../php/login.php" method="POST">
+			<label for="id">ID de usuario: </label><br>
+			<input type="text" name="id" id="id" onkeyup="validarNumeros();" required><br>
+			
+			<!-- Mensaje de verificación -->
+			<label id="alerta1" style="visibility: hidden;"><font color="red" size="2">¡Este campo sólo admite números enteros!</font></label><br>
+				
+			<label for="pass">Contraseña: </label><br>
+			<input type="password" id="contrasena" name="contrasena" required><br><br>
+
+			<input type="submit" value="Enviar"><br><br>
+		</form>
+	</div>
+</body>
+</html>
